@@ -1,0 +1,6 @@
+Well done!
+You found the instructions file!!!
+
+Now you should answer the two easy questions below, and send this file to your tutor.
+1. What is your name?
+2. What is the date today?
