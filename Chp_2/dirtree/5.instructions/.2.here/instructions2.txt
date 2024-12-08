@@ -1,1 +1,0 @@
-Not only directories can be hidden!
