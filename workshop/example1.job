@@ -1,0 +1,15 @@
+#!/bin/bash
+#BSUB -J my_1st_job # Job name
+#BSUB -q short         # Submit to the 'short' queue
+#BSUB -n 6            # Request CPU cores
+#BSUB -R "rusage[mem=16GB]" # Request memory
+#BSUB -R "span[hosts=1]"
+#BSUB -W 1:30         # Set wall time limit to 1 hour 30 minutes
+#BSUB -o output.%J    # Redirect standard output to a file (output.<job_id>)
+#BSUB -e error.%J     # Redirect error output to a file (error.<job_id>)
+
+echo "Number of allocated CPUs: $LSB_DJOB_NUMPROC"
+
+source ~/.bashrc
+conda activate aihub_env
+python parallel_script_1.py
